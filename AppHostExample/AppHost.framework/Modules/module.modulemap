@@ -1,0 +1,6 @@
+framework module AppHost {
+  umbrella header "AppHost.h"
+
+  export *
+  module * { export * }
+}

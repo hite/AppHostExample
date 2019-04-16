@@ -1,0 +1,252 @@
+/** widget **/
+.f-hide{
+    display: none;
+}
+/** global**/
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+#app {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.c-garden {
+    padding: 0 30px 10px 80px;
+}
+
+.c-tool-panel {
+    position: fixed;
+    left: 15px;
+    top: 40%;
+    width: 50px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    background: #E3EDFF;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+}
+
+.w-tool-item {
+    font-size: 12px;
+    color: #4468b9;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/** 下面命令行区域 **/
+.m-output {
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: 200;
+
+}
+
+.m-output-result {
+    /* border-bottom: 1px solid #CCCCCC; */
+    font-size: 12px;
+    text-indent: 10px;
+}
+
+.m-input {
+    padding: 5px 0;
+    background-color: white;
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 5px;
+}
+.m-input .w-env-icon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 14px;
+    left: -35px;
+}
+
+.m-input .w-command {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-top: 2px solid #E3EDFF;
+    border-bottom: 2px solid #E3EDFF;
+    border-right: 100px solid #fff;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: 200;
+    text-indent: 10px;
+    box-sizing: border-box;
+}
+
+.m-input .w-command-run {
+    color: #333333;
+    position: absolute;
+    width: 90px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.m-output-command {
+    width: 100%;
+    padding: 5px 0;
+    margin: 0;
+    border-top: 1.5px solid #CCCCCC;
+    min-height: 32px;
+    color: #333333;
+    font-size: 16px;
+    line-height: 32px;
+    /* text-indent: 10px; */
+}
+
+.m-output-command-error{
+    color: #333333;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.w-eval-succ{
+    color: #333333;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.w-em-seq {
+    color: #333333;
+/* font-size: 14px; */
+line-height: 14px;
+vertical-align: text-bottom;
+text-indent: 0;
+}
+
+pre {
+    margin-top: 0;
+    padding-left: 15px;
+}
+
+.m-output-type {
+    margin-top: 5px;
+    /* text-indent: 5px; */
+    text-decoration: underline;
+}
+
+.w-help-code {
+    background-color: #E3EDFF;
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px;
+    font-weight: 400;
+    font-family: monospace;
+    word-wrap: break-word;
+}
+
+.w-err-code {
+    color: #de3535;
+    font-size: 14px;
+}
+
+.w-welcome-slogan {
+    font-size: 16px;
+    color: #4468b9;
+    text-align: center;
+    height: 20px;
+    line-height: 18px;
+}
+
+.c-welcome-desc {
+    color: #999;
+    font-size: 14px;
+    text-indent: 15px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.w-example-title {
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+    padding: 7px 5px;
+    text-indent: 0;
+}
+/** 命令历史部分**/
+.c-command-history{
+    padding: 2px 0;
+    margin: 0;
+    list-style: upper-roman;
+    background-color: #E3EDFF;
+    border-radius: 2px;
+}
+.w-history-item{
+    line-height: 16px;
+    font-size: 14px;
+    padding: 4px 0;
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* 注释部分 */
+.m-output-doc {
+    font-size: 14px;
+    padding: 0 15px
+}
+
+.w-doc-type_title {
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.w-doc-param-container {
+    list-style-type: circle;
+    padding-left: 20px;
+    margin: 5px;
+}
+
+.w-doc-param span {
+    font-weight: bold;
+}
+
+.w-doc-code {
+    background-color: black;
+    padding: 10px 5px;
+    color: white;
+}
+
+.w-doc-codeResult {
+    padding: 5px 0;
+}
+
+.w-api_list-group {
+    margin: 8px 0 4px;
+    color: #4468b9;
+    font-weight: bold;
+}
+
+.w-api_list-api {
+    display: block;
+}
+
+.w-api_list-other {
+    padding: 0 5px;
+}
