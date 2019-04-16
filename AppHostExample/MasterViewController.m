@@ -33,8 +33,8 @@
     NSArray *dataSource = [NSArray arrayWithObjects:@{
                                               @"name":@"加载接口示例页面，观察接口调用",@"url": @"http://qian.163.com/act/pub/ZtJm9plcJr.html"
                                               },
-                           @{@"name":@"加载复杂页面，观察其性能参数",@"url": @"http://m.you.163.com"},
-                           @{@"name":@"加载本地页面，测试接口参数", @"fileName":@"index.html",@"dir": @"/TestCase", @"domain": @"https://m.you.163.com"},
+                           @{@"name":@"加载复杂页面，观察其性能参数",@"url": @"https://m.you.163.com"},
+                           @{@"name":@"加载本地页面，测试接口参数", @"fileName":@"/index.html",@"dir": @"TestCase", @"domain": @"https://m.you.163.com"},
                            @{@"name":@"加载本地页面，向服务方式请求", @"fileName":@"mymt.html",@"domain": @"http://i.meituan.com"},
                            nil];
     self.objects = dataSource;
@@ -74,7 +74,7 @@
         NSString* domain = [object objectForKey:@"domain"];
         if (dir.length > 0) {
             NSURL *url = [mainURL URLByAppendingPathComponent:dir];
-            [vc loadIndexFile:@"index.html" inDirectory:url domain:domain];
+            [vc loadIndexFile:fileName inDirectory:url domain:domain];
         } else {
             [vc loadLocalFile:[mainURL URLByAppendingPathComponent:fileName] domain:domain];
         }
