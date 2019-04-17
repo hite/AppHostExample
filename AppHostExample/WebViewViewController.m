@@ -7,6 +7,7 @@
 //
 
 #import "WebViewViewController.h"
+#import <AppHost/AppHost.h>
 
 @interface WebViewViewController ()
 
@@ -19,14 +20,34 @@
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+{
+    NSURLRequest *request = navigationAction.request;
+    //此url解析规则自己定义
+    NSString *rurl = [[request URL] absoluteString];
+    NSString *kProtocol = @"openapp.jdmobile://virtual?params=";
+    if ([rurl hasPrefix:kProtocol]) {
+        NSString *param = [rurl stringByReplacingOccurrencesOfString:kProtocol withString:@""];
+        
+        NSDictionary *contentJSON = nil;
+        NSError *contentParseError;
+        if (param) {
+            param = [self stringDecodeURIComponent:param];
+            contentJSON = [NSJSONSerialization JSONObjectWithData:[param dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&contentParseError];
+        }
+        
+        [self callNative:@"toast" parameter:@{
+                                              @"text":[contentJSON description]
+                                              }];
+        decisionHandler(WKNavigationActionPolicyCancel);
+    } else {
+        [super webView:webView decidePolicyForNavigationAction:navigationAction decisionHandler:decisionHandler];
+    }
 }
-*/
 
+- (NSString *)stringDecodeURIComponent:(NSString *)encoded{
+    NSString *decoded = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL, (CFStringRef)encoded, CFSTR(""), kCFStringEncodingUTF8);
+    //    NSLog(@"decodedString %@", decoded);
+    return decoded;
+}
 @end
