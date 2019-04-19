@@ -14,8 +14,8 @@
 + (NSDictionary<NSString *, NSString *> *)supportActionList
 {
     return @{
-             @"toast":@"1",
-             @"showLoading":@"1",
+             @"toast_":@"1",
+             @"showLoading_":@"1",
              @"hideLoading":@"1"
              };
 }
