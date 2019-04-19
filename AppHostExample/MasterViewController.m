@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     kWebViewProgressTintColorRGB = 0xdcb000;
     kFakeCookieWebPageURLWithQueryString = @"https://you.163.com?26u-KQa-fKQ-3BD";
     kGCDWebServer_logging_enabled = YES;
@@ -34,7 +34,7 @@
     NSArray *dataSource = [NSArray arrayWithObjects:
                            @{@"name":@"加载京东页面，拦截京东 JSBridge 协议",
                              @"url": @"https://item.m.jd.com/ware/view.action?wareId=5904827&sid=null",
-                             @"desc":@"本用例展示：AppHost 不仅提供了内置的 JSBridge 协议，还可以和原有的协议共存。\n 通过继承 AppHostViewController，重载了 decidePolicy 来实现这一点。保持内聚的同时，也具备一定的灵活性。\na.另外，可以看到 AppHostRespone 作为业务逻辑实现类的角色，不仅可以被 h5 调用，AppHost 也可以让 native 主动调用此能力。将前后端能力统一。\nb. 操作步骤；\n, 点击顶部的立即下载，此时弹出一个 toast，内容是京东 JSBridge 接口参数。\nPS: 通过 AppHost 提供的 debugger，可以看到线上的代码里还有 console.log 日志"
+                             @"desc":@"本用例展示：AppHost 不仅提供了内置的 JSBridge 协议，还可以和原有的协议共存。\n 通过继承 AppHostViewController，重载了 decidePolicy 来实现这一点。保持内聚的同时，也具备一定的灵活性。\na.另外，可以看到 AppHostRespone 作为业务逻辑实现类的角色，不仅可以被 h5 调用，AppHost 也可以让 native 主动调用此能力。将前后端能力统一。\nb. 操作步骤；\n, 点击顶部的立即下载，此时弹出一个 toast，内容是京东 JSBridge 接口参数。\n 另外这里的 toast 是由 AppHostRespone 的扩展类 HUDResponse 来实现具体功能的，展示灵活的业务扩展能力。\nPS: 通过 AppHost 提供的 debugger，可以看到线上的代码里还有 console.log 日志"
                            },
                            @{@"name":@"加载严选移动端首页，观察其性能参数",
                              @"url": @"https://m.you.163.com",
