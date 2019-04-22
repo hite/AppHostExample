@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 
-#define AH_VIEWCONTROLLER_BASE BaseViewController
-
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
 @end

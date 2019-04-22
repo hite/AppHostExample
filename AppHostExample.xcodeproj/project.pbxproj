@@ -19,7 +19,8 @@
 		481A06D7226587C700DD57BB /* WebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A06D6226587C700DD57BB /* WebViewViewController.m */; };
 		481A06DF2265B72100DD57BB /* mymt.html in Resources */ = {isa = PBXBuildFile; fileRef = 481A06DE2265B72100DD57BB /* mymt.html */; };
 		481A06E62265C58000DD57BB /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A06E52265C58000DD57BB /* BaseViewController.m */; };
-		4856149C2267579300E9BB89 /* AppHost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 485614972267564700E9BB89 /* AppHost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48B39A32226D6988004D5872 /* AppHost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485614972267564700E9BB89 /* AppHost.framework */; };
+		48B39A33226D6988004D5872 /* AppHost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 485614972267564700E9BB89 /* AppHost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +31,14 @@
 			remoteGlobalIDString = 48D888AA21D4CF08006E4279;
 			remoteInfo = AppHost;
 		};
-		485614982267565000E9BB89 /* PBXContainerItemProxy */ = {
+		48B39A30226D6971004D5872 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 485614912267564600E9BB89 /* AppHost.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 48D888A921D4CF08006E4279;
+			remoteInfo = AppHost;
+		};
+		48B39A34226D6988004D5872 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 485614912267564600E9BB89 /* AppHost.xcodeproj */;
 			proxyType = 1;
@@ -46,7 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4856149C2267579300E9BB89 /* AppHost.framework in Embed Frameworks */,
+				48B39A33226D6988004D5872 /* AppHost.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48B39A32226D6988004D5872 /* AppHost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +187,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				485614992267565000E9BB89 /* PBXTargetDependency */,
+				48B39A31226D6971004D5872 /* PBXTargetDependency */,
+				48B39A35226D6988004D5872 /* PBXTargetDependency */,
 			);
 			name = AppHostExample;
 			productName = AppHostExample;
@@ -266,10 +276,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		485614992267565000E9BB89 /* PBXTargetDependency */ = {
+		48B39A31226D6971004D5872 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AppHost;
-			targetProxy = 485614982267565000E9BB89 /* PBXContainerItemProxy */;
+			targetProxy = 48B39A30226D6971004D5872 /* PBXContainerItemProxy */;
+		};
+		48B39A35226D6988004D5872 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppHost;
+			targetProxy = 48B39A34226D6988004D5872 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
