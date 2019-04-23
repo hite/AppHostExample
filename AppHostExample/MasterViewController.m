@@ -26,7 +26,7 @@
     kGCDWebServer_logging_enabled = YES;
     [[AHDebugServerManager sharedInstance] showDebugWindow];
     [[AHDebugServerManager sharedInstance] start];
-    
+    // 添加新的 Response，提供新的接口能力
     [[AHResponseManager defaultManager] addCustomResponse:HUDResponse.class];
     
     // Do any additional setup after loading the view.
