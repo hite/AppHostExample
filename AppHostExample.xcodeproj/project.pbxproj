@@ -39,13 +39,6 @@
 			remoteGlobalIDString = 48D888A921D4CF08006E4279;
 			remoteInfo = AppHost;
 		};
-		48B39A34226D6988004D5872 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 485614912267564600E9BB89 /* AppHost.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 48D888A921D4CF08006E4279;
-			remoteInfo = AppHost;
-		};
 		48B39A6E226EE7AD004D5872 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 481A06A02265710700DD57BB /* Project object */;
@@ -217,7 +210,6 @@
 			);
 			dependencies = (
 				48B39A31226D6971004D5872 /* PBXTargetDependency */,
-				48B39A35226D6988004D5872 /* PBXTargetDependency */,
 			);
 			name = AppHostExample;
 			productName = AppHostExample;
@@ -348,11 +340,6 @@
 			isa = PBXTargetDependency;
 			name = AppHost;
 			targetProxy = 48B39A30226D6971004D5872 /* PBXContainerItemProxy */;
-		};
-		48B39A35226D6988004D5872 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AppHost;
-			targetProxy = 48B39A34226D6988004D5872 /* PBXContainerItemProxy */;
 		};
 		48B39A6F226EE7AD004D5872 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
