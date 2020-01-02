@@ -10,6 +10,7 @@
 #import "WebViewViewController.h"
 #import <AppHost/AppHost.h>
 #import "HUDResponse.h"
+#import "DescTableViewCell.h"
 
 @interface MasterViewController ()
 
@@ -56,6 +57,9 @@
                              @"domain": @"http://i.meituan.com"},
                            nil];
     self.objects = dataSource;
+    
+    [self.tableView registerClass:DescTableViewCell.class forCellReuseIdentifier:@"Cell"];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
 #pragma mark - Table View
@@ -64,17 +68,20 @@
     return 1;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    return 100;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.objects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    DescTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     NSDictionary *object = self.objects[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld - %@", (long)indexPath.row + 1, [object objectForKey:@"name"]];
-    cell.detailTextLabel.text = [object objectForKey:@"desc"];
+
+    [cell configureWithTitle:[NSString stringWithFormat:@"%ld - %@", (long)indexPath.row + 1, [object objectForKey:@"name"]] desc:[object objectForKey:@"desc"]];
     return cell;
 }
 

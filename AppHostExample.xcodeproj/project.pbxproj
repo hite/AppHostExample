@@ -22,6 +22,10 @@
 		48B39A32226D6988004D5872 /* AppHost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485614972267564700E9BB89 /* AppHost.framework */; };
 		48B39A33226D6988004D5872 /* AppHost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 485614972267564700E9BB89 /* AppHost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		48B39A6C226EE7AD004D5872 /* AppHostExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B39A6B226EE7AD004D5872 /* AppHostExampleUITests.swift */; };
+		48B8F5A923BDD98200EDDBBE /* ViewController_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B8F5A823BDD98200EDDBBE /* ViewController_Preview.swift */; };
+		48B8F5AD23BDE1D700EDDBBE /* View_Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B8F5AC23BDE1D600EDDBBE /* View_Preview.swift */; };
+		48B8F5B023BDE85C00EDDBBE /* DescTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B8F5AF23BDE85C00EDDBBE /* DescTableViewCell.m */; };
+		48B8F5BB23BE15E600EDDBBE /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B8F5BA23BE15E600EDDBBE /* UIViewPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,13 @@
 		48B39A69226EE7AD004D5872 /* AppHostExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppHostExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B39A6B226EE7AD004D5872 /* AppHostExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHostExampleUITests.swift; sourceTree = "<group>"; };
 		48B39A6D226EE7AD004D5872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48B8F5A523BDD94500EDDBBE /* AppHostExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppHostExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		48B8F5A823BDD98200EDDBBE /* ViewController_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Preview.swift; sourceTree = "<group>"; };
+		48B8F5AC23BDE1D600EDDBBE /* View_Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_Preview.swift; sourceTree = "<group>"; };
+		48B8F5AE23BDE85C00EDDBBE /* DescTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DescTableViewCell.h; sourceTree = "<group>"; };
+		48B8F5AF23BDE85C00EDDBBE /* DescTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DescTableViewCell.m; sourceTree = "<group>"; };
+		48B8F5B123BDF3A200EDDBBE /* Preview-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Preview-Header.h"; sourceTree = "<group>"; };
+		48B8F5BA23BE15E600EDDBBE /* UIViewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,10 +142,13 @@
 		481A06AA2265710700DD57BB /* AppHostExample */ = {
 			isa = PBXGroup;
 			children = (
+				48B8F5A423BDD8CB00EDDBBE /* PreviewSupport */,
 				481A06AB2265710700DD57BB /* AppDelegate.h */,
 				481A06AC2265710700DD57BB /* AppDelegate.m */,
 				481A06AE2265710700DD57BB /* MasterViewController.h */,
 				481A06AF2265710700DD57BB /* MasterViewController.m */,
+				48B8F5AE23BDE85C00EDDBBE /* DescTableViewCell.h */,
+				48B8F5AF23BDE85C00EDDBBE /* DescTableViewCell.m */,
 				481A06E42265C58000DD57BB /* BaseViewController.h */,
 				481A06E52265C58000DD57BB /* BaseViewController.m */,
 				481A06D5226587C700DD57BB /* WebViewViewController.h */,
@@ -194,6 +208,18 @@
 			path = AppHostExampleUITests;
 			sourceTree = "<group>";
 		};
+		48B8F5A423BDD8CB00EDDBBE /* PreviewSupport */ = {
+			isa = PBXGroup;
+			children = (
+				48B8F5AC23BDE1D600EDDBBE /* View_Preview.swift */,
+				48B8F5A823BDD98200EDDBBE /* ViewController_Preview.swift */,
+				48B8F5BA23BE15E600EDDBBE /* UIViewPreview.swift */,
+				48B8F5B123BDF3A200EDDBBE /* Preview-Header.h */,
+				48B8F5A523BDD94500EDDBBE /* AppHostExample-Bridging-Header.h */,
+			);
+			name = PreviewSupport;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,6 +272,7 @@
 				TargetAttributes = {
 					481A06A72265710700DD57BB = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1130;
 					};
 					48B39A68226EE7AD004D5872 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -315,11 +342,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48B8F5AD23BDE1D700EDDBBE /* View_Preview.swift in Sources */,
 				481A06D32265800E00DD57BB /* UIView+Toast.m in Sources */,
 				481A06D7226587C700DD57BB /* WebViewViewController.m in Sources */,
+				48B8F5B023BDE85C00EDDBBE /* DescTableViewCell.m in Sources */,
 				481A06B02265710700DD57BB /* MasterViewController.m in Sources */,
+				48B8F5BB23BE15E600EDDBBE /* UIViewPreview.swift in Sources */,
 				481A06AD2265710700DD57BB /* AppDelegate.m in Sources */,
 				481A06BE2265710800DD57BB /* main.m in Sources */,
+				48B8F5A923BDD98200EDDBBE /* ViewController_Preview.swift in Sources */,
 				481A06E62265C58000DD57BB /* BaseViewController.m in Sources */,
 				481A06CB22657CCD00DD57BB /* HUDResponse.m in Sources */,
 			);
@@ -484,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5F3P75AV37;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -497,6 +529,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.hite.app.AppHostExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppHostExample/AppHostExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -505,12 +540,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5F3P75AV37;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AppHostExample",
 				);
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = AppHostExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -518,6 +555,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.hite.app.AppHostExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppHostExample/AppHostExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
