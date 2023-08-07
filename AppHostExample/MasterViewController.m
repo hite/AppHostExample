@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+
     kWebViewProgressTintColorRGB = 0xdcb000;
     kFakeCookieWebPageURLWithQueryString = @"https://you.163.com?26u-KQa-fKQ-3BD";
     kGCDWebServer_logging_enabled = YES;
@@ -91,30 +92,26 @@
     NSString *url = [object objectForKey:@"url"];
     NSString *fileName = [object objectForKey:@"fileName"];
     
-    AHViewControllerPreRender * _Nonnull preRender = [AHViewControllerPreRender defaultRender];
     if (url.length > 0) {
-        // 这里仅仅做演示。只有确定唯一的 url ，才调用这个方法。大部分时间都不应该调用 getWebViewController 浪费内存
-        [preRender getWebViewController:WebViewViewController.class preloadURL:url completion:^(AppHostViewController * _Nonnull vc) {
-            if (![vc.url isEqualToString:url]) {
-                vc.url = url;
-            }
-            [self.navigationController pushViewController:vc animated:YES];
-        }];
+        AppHostViewController *vc = [AppHostViewController new];
+        if (![vc.url isEqualToString:url]) {
+            vc.url = url;
+        }
+        [self.navigationController pushViewController:vc animated:YES];
+
     } else if(fileName.length > 0){
-        [preRender getRenderedViewController:WebViewViewController.class completion:^(UIViewController * _Nonnull obj) {
-            WebViewViewController *vc = (WebViewViewController *)obj;
-            NSString *dir = [object objectForKey:@"dir"];
-            NSURL * _Nonnull mainURL = [[NSBundle mainBundle] bundleURL];
-            NSString* domain = [object objectForKey:@"domain"];
-            if (dir.length > 0) {
-                NSURL *url = [mainURL URLByAppendingPathComponent:dir];
-                [vc loadIndexFile:fileName inDirectory:url domain:domain];
-            } else {
-                [vc loadLocalFile:[mainURL URLByAppendingPathComponent:fileName] domain:domain];
-            }
-            
-            [self.navigationController pushViewController:vc animated:YES];
-        }];
+        AppHostViewController *vc = [AppHostViewController new];
+        NSString *dir = [object objectForKey:@"dir"];
+        NSURL * _Nonnull mainURL = [[NSBundle mainBundle] bundleURL];
+        NSString* domain = [object objectForKey:@"domain"];
+        if (dir.length > 0) {
+            NSURL *url = [mainURL URLByAppendingPathComponent:dir];
+            [vc loadIndexFile:fileName inDirectory:url domain:domain];
+        } else {
+            [vc loadLocalFile:[mainURL URLByAppendingPathComponent:fileName] domain:domain];
+        }
+        
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
