@@ -17,7 +17,6 @@
 		481A06D022657D4600DD57BB /* TestCase in Resources */ = {isa = PBXBuildFile; fileRef = 481A06CF22657D4600DD57BB /* TestCase */; };
 		481A06D32265800E00DD57BB /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A06D22265800E00DD57BB /* UIView+Toast.m */; };
 		481A06D7226587C700DD57BB /* WebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A06D6226587C700DD57BB /* WebViewViewController.m */; };
-		481A06DF2265B72100DD57BB /* mymt.html in Resources */ = {isa = PBXBuildFile; fileRef = 481A06DE2265B72100DD57BB /* mymt.html */; };
 		481A06E62265C58000DD57BB /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481A06E52265C58000DD57BB /* BaseViewController.m */; };
 		48B39A32226D6988004D5872 /* AppHost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485614972267564700E9BB89 /* AppHost.framework */; };
 		48B39A33226D6988004D5872 /* AppHost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 485614972267564700E9BB89 /* AppHost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -84,7 +83,6 @@
 		481A06D22265800E00DD57BB /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		481A06D5226587C700DD57BB /* WebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewViewController.h; sourceTree = "<group>"; };
 		481A06D6226587C700DD57BB /* WebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewViewController.m; sourceTree = "<group>"; };
-		481A06DE2265B72100DD57BB /* mymt.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = mymt.html; path = resources/mymt.html; sourceTree = "<group>"; };
 		481A06E42265C58000DD57BB /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		481A06E52265C58000DD57BB /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		485614912267564600E9BB89 /* AppHost.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppHost.xcodeproj; path = ../AppHost/AppHost.xcodeproj; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 		481A06CE22657D3700DD57BB /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				481A06DE2265B72100DD57BB /* mymt.html */,
 				481A06CF22657D4600DD57BB /* TestCase */,
 			);
 			name = resources;
@@ -320,7 +317,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				481A06DF2265B72100DD57BB /* mymt.html in Resources */,
 				481A06D022657D4600DD57BB /* TestCase in Resources */,
 				481A06BB2265710800DD57BB /* LaunchScreen.storyboard in Resources */,
 				481A06B82265710800DD57BB /* Assets.xcassets in Resources */,
