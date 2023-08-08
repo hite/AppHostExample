@@ -89,14 +89,14 @@
     NSString *fileName = [object objectForKey:@"fileName"];
     
     if (url.length > 0) {
-        AppHostViewController *vc = [AppHostViewController new];
+        WebViewViewController *vc = [WebViewViewController new];
         if (![vc.url isEqualToString:url]) {
             vc.url = url;
         }
         [self.navigationController pushViewController:vc animated:YES];
 
     } else if(fileName.length > 0){
-        AppHostViewController *vc = [AppHostViewController new];
+        WebViewViewController *vc = [WebViewViewController new];
         NSString *dir = [object objectForKey:@"dir"];
         NSURL * _Nonnull mainURL = [[NSBundle mainBundle] bundleURL];
         NSString* domain = [object objectForKey:@"domain"];
