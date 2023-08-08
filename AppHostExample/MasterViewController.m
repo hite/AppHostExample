@@ -52,10 +52,6 @@
                              @"domain": @"https://m.you.163.com",
                              @"desc": @"本用例展示：AppHost 加载本地文件夹资源的能力。可以加载 html，以及 html 里引用的相同目录下的 图片资源\\javascript\\css 文件 3 类资源（不支持字体等）。\n如果要加载的主域是 http 的，可以使用嵌套性的资源引用，如 css 文件里引用了一个相对路径的图标。"
                              },
-                           @{@"name":@"加载本地页面，可向服务器发 ajax 请求",
-                             @"fileName":@"mymt.html",
-                             @"desc": @"本地文件向美团的服务器发送请求。因为 Cookie 不对，所以返回错误数据，但是也演示了，是可以正确的发送和接受数据的",
-                             @"domain": @"http://i.meituan.com"},
                            nil];
     self.objects = dataSource;
     

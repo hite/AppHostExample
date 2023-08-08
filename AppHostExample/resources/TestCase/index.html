@@ -89,7 +89,7 @@
                 //
                 var testURL = document.getElementById('testURL');
                 testURL.onclick = function() {
-                     window.location.href = testURL.value;
+                     window.location.href = document.getElementById('url').value;
                 }
 
                 window.appHost.on('onready', function() {
